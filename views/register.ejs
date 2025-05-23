@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="w-full h-screen bg-zinc-900 p-10 text-white">
+        <h1 style="margin-left: 32px;" class="font-bold text-5xl mt-8">WELCOME !!!</h1>
+        <form class=" grid grid-cols-2 w-fit gap-x-10 mx-auto flex flex-col mt-16" action="/register" method="post">
+            <a href="/logout" class=" absolute top-4 right-10 w-32 h-12 text-black block px-5 py-2 bg-yellow-500 rounded-lg mt-7 text-2xl font-bold">LogOut</a>
+            <a href="/today" class="w-65 h-52 text-black block px-5 py-2 bg-red-500 rounded-lg mt-8 text-2xl font-bold text-center flex items-center justify-center">TODAY</a>
+            <a href="/tomorrow" class="w-65 h-52 text-black block px-5 py-2 bg-orange-500 rounded-lg mt-8 text-2xl font-bold text-center flex items-center justify-center">TOMORROW</a>
+            <a href="/thisweek" class="w-65 h-52 text-black block px-5 py-2 bg-blue-500 rounded-lg mt-10 text-2xl font-bold text-center flex items-center justify-center">THIS WEEK</a>
+            <a href="/thismonth" class="w-65 h-52 text-black block px-5 py-2 bg-green-500 rounded-lg mt-10 text-2xl font-bold text-center flex items-center justify-center">THIS MONTH</a>
+        </form>
+    </div>
+</body>
+</html>
