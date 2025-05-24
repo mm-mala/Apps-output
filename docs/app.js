@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -9,6 +7,8 @@ const jwt = require('jsonwebtoken');
 const db = require('../config/mongoose-con');
 const {generateToken} = require('../utils/generateToken');
 const cookieParser = require('cookie-parser');
+
+require('dotenv').config();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
