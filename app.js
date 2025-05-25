@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const userModel = require('../models/user');
+const userModel = require('./models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const db = require('../config/mongoose-con');
-const {generateToken} = require('../utils/generateToken');
+const db = require('./config/mongoose-con');
+const {generateToken} = require('./utils/generateToken');
 const cookieParser = require('cookie-parser');
 
 require('dotenv').config();
@@ -102,6 +102,7 @@ app.get("/thismonth", function(req, res){
   res.render("thismonth");
 });
 
-app.listen(3000, function(){
-  console.log("its running!");
+const port = process.env.PORT || 3000; 
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
